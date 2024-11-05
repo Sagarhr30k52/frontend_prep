@@ -1,0 +1,85 @@
+<!-- Assignment: Enhancing User Experience with Advanced Form Elements
+
+Story: TechMart has received positive feedback on the revamped user registration form, but they want to further enhance the user experience by incorporating advanced form elements. As a web developer for TechMart, your task is to implement additional features using text area, radio buttons, select dropdowns, fieldset/legend, range input, and provide functionality for preselecting options using the "selected" and "checked" attributes. Additionally, include a reset button to allow users to clear the form easily.
+
+Requirements:
+
+Expand the user registration form to include the following elements:
+
+Text Area: Allow users to input longer comments or messages.
+Radio Buttons: Provide options for the user to select a preferred subscription plan.
+Select Dropdown: Allow users to select their country from a dropdown list.
+Fieldset/Legend: Group related form elements such as subscription options.
+Range Input: Implement a slider for users to select a preferred volume level.
+Preselect Options: Use the "selected" and "checked" attributes to preselect default options for radio buttons and select dropdowns.
+Reset Button: Include a reset button to clear the form fields.
+Implement appropriate labels, placeholders, and validation for each input field.
+
+Ensure that all required fields are marked as mandatory.
+
+Submission Guidelines:
+
+Create an HTML file named "advanced_registration_form.html" containing the enhanced user registration form. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>advance form html</title>
+</head>
+<body>
+    
+<form action="">
+    <label for="comments">comments</label>
+    <textarea name="" id="comments"></textarea>
+    <br><br>
+
+
+    
+    <fieldset>
+        <legend>radio</legend>
+        <input type="radio" id="html" name="fav_language" value="HTML" checked>
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+    </fieldset>
+    
+
+    <fieldset>
+        <legend>dropdown</legend>
+        <select name="" id="">
+            <option value="1">html</option>
+            <option value="2">css</option>
+            <option value="3" selected>javascript</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>checkbox</legend>
+        <input type="checkbox" id="html" checked>
+        <label for="html">html</label>
+
+        <input type="checkbox" id="css">
+        <label for="css">css</label>
+
+        <input type="checkbox" id="js" checked>
+        <label for="js">JavaScript</label>
+
+    </fieldset>
+
+
+    <label for="range">range</label>
+    <input type="range" step="10" min="100" max="200">
+
+    <input type="submit">
+    <input type="reset">
+
+</form>
+
+</body>
+</html>

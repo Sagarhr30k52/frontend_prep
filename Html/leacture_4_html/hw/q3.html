@@ -1,0 +1,76 @@
+<!-- Got it, I'll remove the alt tag considerations. Here's the revised explanation:
+
+Assignment: Enhancing Multimedia Content for "Wanderlust Adventures"
+Scenario
+You are working as a web developer for a travel blog called "Wanderlust Adventures". The blog features various multimedia content to engage its readers. Your task is to create a section on the blog that showcases a video of a beautiful waterfall and an audio clip of soothing drum music. You need to embed these multimedia files using HTML and enhance them with additional features.
+
+Requirements
+Embed a video that showcases a beautiful waterfall.
+The video should have a height of 200 pixels.
+It should have playback controls, be muted, and autoplay when the page loads.
+Include a caption below the video that says "Waterfall Video".
+Embed an audio clip of soothing drum music.
+The audio should have playback controls, be muted, and autoplay when the page loads.
+Include a caption below the audio clip that says "Drum Music".
+Enhance the content by adding a paragraph before each multimedia element to describe it.
+Add a download link for both the video and the audio so users can download the files.
+Hints
+Embed the video:
+
+Use the <video> element with the attributes: height, controls, muted, and autoplay.
+Add a <source> element inside the <video> element.
+Include fallback text for browsers that do not support the <video> tag.
+Add a <figcaption> for the video.
+Embed the audio:
+
+Use the <audio> element with the attributes: controls, autoplay, and muted.
+Add a <source> element inside the <audio> element.
+Include fallback text for browsers that do not support the <audio> tag.
+Add a <figcaption> for the audio.
+Add descriptive paragraphs before each multimedia element:
+
+Describe the content of the video and audio.
+Add download links:
+
+Use the <a> element with the href attribute pointing to the video and audio files.
+Add the download attribute to allow users to download the files directly. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multi media in html</title>
+</head>
+<body>
+    
+<figure>    
+<video height="200 px" controls autoplay muted>
+    <source src="./Zoom Meeting 2023-09-24 19-19-57.mp4">
+</video>
+<figcaption>video of water fall</figcaption>
+
+<a href="./Zoom Meeting 2023-09-24 19-19-57.mp4"> download video</a>
+</figure>
+
+<figure>
+    <audio controls autoplay muted>
+        <source src="./kul_dj_kantik_.mp3">
+    </audio>
+    <figcaption>audio</figcaption>
+    
+    <a href="./kul_dj_kantik_.mp3" download=""> download song</a>
+</figure>
+
+
+
+<h2>i frames</h2>
+
+<figure>
+    <iframe width="360" height="200" src="https://www.youtube.com/embed/0nI7m5yH8Z8?si=dtwF2MEXr50lUFgF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</figure>
+
+</body>
+</html>
