@@ -1,0 +1,47 @@
+/*
+to provide styling -> select the element*/
+/* universal selector */
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* element selector */
+h2{
+    color:lightgreen;
+    background-color: gray;
+    font-size: 1rem;
+}
+
+span{
+    font-size: 2rem;
+}
+
+/* p{
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    line-height: 20px;
+} */
+
+/* class selector */
+.para{
+    color: blue;
+    font-size: 20px;
+}
+
+/* id selector */
+#unique{
+    color:red;
+}
+#unique2{
+    color: green;
+}
+
+.some{
+    font-style: italic;
+}
+
+.para.some{
+    background-color: gray;
+}
