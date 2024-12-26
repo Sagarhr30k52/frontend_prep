@@ -37,22 +37,43 @@ img{
     position: relative;
 }
 
+.menu-btn:hover{
+    background-color: skyblue;
+}
 .menu-items{
     background-color: lightgrey;
     position: absolute;
-    top: 13px;
+    top: 4px;
     width: 6rem;
+    display: none;
+    z-index: 1;
 }
 
-main{
+li:hover{
+    background-color: gray;
+}
+
+.menu:hover .menu-items{
+    display: block;
+}
+
+.video-input{
+    display: none;
+}
+
+main{ 
     background-color: black;
     height: calc(100vh - 8rem);
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.video{
+    height: 100%;
+}
 
 footer{
     height: 3rem;
     background-color: gray;
 }
-

@@ -18,32 +18,35 @@
         </div>
 
         <div class="manu-bar">
-            <div class="menu">
+            <div class="menu" id="openbtn">
                 <div class="menu-btn">Open</div> 
+                <input type="file" class="video-input" id="videobtn">
             </div>
 
             <div class="menu">
                 <div class="menu-btn">playback</div>
                 <ul class="menu-items">
-                    <li>SpeedUp</li>
-                    <li>SpeedDown</li>
+                    <li id="speedup">Speed Up</li>
+                    <li id="speeddown">Speed Down</li>
                 </ul>
             </div>
 
             <div class="menu">
                 <div class="menu-btn">Audio</div>
-                <!-- <ul class="menu-items">
-                    <li>Volume up</li>
-                    <li>Volume down</li>
-                </ul> -->
+                <ul class="menu-items">
+                    <li id="volumeup">Volume up</li>
+                    <li id="volumedown">Volume Down</li>
+                </ul>
             </div>
         </div>
     </header>
 
-    <main></main>
+    <main id="main"></main>
 
     <footer></footer>
 
 
 </body>
+
+<script src="script.js"></script>
 </html>
