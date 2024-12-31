@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            /* transition-property: all; */
+            transition-duration: 3s;
+        }
+        .box_1{
+            background-color: skyblue;
+        }
+        .box_2{
+            background-color: pink;
+        }
+        .box_3{
+            background-color: lightgreen;
+        }
+        .box_1:hover{
+            transform: rotateX(50deg);
+        }
+        .box_2:hover{
+            transform: rotateY(50deg);
+        }
+        .box_3:hover{
+            transform: rotate(50deg);
+        }
+    </style>
+</head>
+<body>
+    <h2>rotate</h2>
+    <div class="box_1"></div>
+    <div class="box_2"></div>
+    <div class="box_3"></div>
+</body>
+</html>

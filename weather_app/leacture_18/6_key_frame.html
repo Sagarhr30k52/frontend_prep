@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container{
+            background-color: gray;
+            height: 500px;
+            width: 500px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* animation-name: color-changer;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite; */
+            
+        }
+        .box{
+            background-color: pink;
+            height: 100px;
+            width: 100px;
+            border:solid black;
+            
+            animation-name: journay-to-circle;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        /* @keyframes color-changer {
+            50%{
+                background-color: blue;
+            }
+            100%{
+                background-color: black;
+            }
+        } */
+
+        @keyframes journay-to-circle {
+            50%{
+                border-radius: 50%;
+            }
+            /* 100%{
+                background-color: white;
+                border-radius: 0px;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -73,7 +73,53 @@ main{
     height: 100%;
 }
 
+.tost{
+    position: fixed;
+    color: wheat;
+    top: 100px;
+    right: 20px;
+    font-size: 1.6rem;
+    display: none;
+}
+
 footer{
     height: 3rem;
     background-color: gray;
+    position: relative;
+}
+
+.icon{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+}
+.fullscreen{
+    right: 1.5rem;
+}
+.backward{
+    left: calc(1.5rem + 3px);
+}
+.forward{
+    left: calc(4.5rem + 13px);
+}
+
+.play{
+    left: 2px;
+}
+.pause{
+    left: 2px;
+    display: none;
+}
+#restart{
+    left: calc(3rem + 8px);
+}
+
+.seek{
+    right: 4rem;
+    width: calc(100% - 12rem);
+}
+
+
+#seekbar{
+    width: calc(100% - 9rem);
 }
