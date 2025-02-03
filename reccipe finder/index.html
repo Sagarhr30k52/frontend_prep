@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes Finder</title>
+    <link rel="stylesheet" href="./reset.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!--********* nav bar ***********-->
+
+    <div class="nav_bar">
+        <div class="heading">RECIPE APP</div>
+        <div class="input-taker">
+            <input type="text" placeholder="search for recipes...">
+            <button>Search</button>
+        </div>
+    </div>
+    
+    <!-- main -->
+     <main>
+        <div class="preText">Search your favourite recipes...</div>
+     </main>
+
+
+     <!-- js -->
+      <script>
+        const searchInput= document.querySelector("input");
+        const button = document.querySelector("button");
+        const preText = document.querySelector(".preText");
+        const main = document.querySelector("main");
+
+        button.addEventListener("click", async function (){
+            const food = searchInput.value;
+            if(food){
+                const data = await fetchfood(food);
+                if(data != null) {
+                    updateDOM(data);
+                }
+            }
+                searchInput.value ="";
+        })
+
+        function updateDOM(data){
+            preText.style.display = "none";
+            const arr = data.meals;
+
+            arr.forEach(function(meal) {
+            myFuntion(meal.strMeal, meal.strCategory,meal.strArea, meal.strMealThumb);});
+
+        }
+
+        function myFuntion(mealName,mealCategory, mealArea, mealstrMealThumb){
+            main.style.height = "100%";
+            main.style.display = "flex";
+            main.style.flexFlow = "row wrap";
+            main.style.gap = "3rem";
+            const card = document.createElement("div");
+            const image = document.createElement("img");
+            image.style.height = "200px";
+            image.style.border = "0px";
+            image.borderRadius = "10px";
+            image.src = mealstrMealThumb;
+            
+            card.style.border = "3px solid black";
+            card.style.borderRadius = "10px";
+            card.style.width = "206px";
+            card.appendChild(image);
+            main.appendChild(card);
+            
+            // const details = document.createElement("div");
+            const list = document.createElement("ul");
+            const item1 = document.createElement("li");
+            item1.textContent = mealName;
+            list.appendChild(item1);
+            
+            const item2 = document.createElement("li");
+            item2.textContent = mealCategory;
+            list.appendChild(item2);
+
+            const item3 = document.createElement("li");
+            item3.textContent = mealArea;
+            list.appendChild(item3);
+            card.appendChild(list); 
+        }
+        
+        async function fetchfood(food){
+            const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`;
+            const response = await fetch(url);
+            
+            // console.log(response);
+
+            if(response.status == 400){
+                alert("food is invalid");
+                return null;
+            } 
+            else if(response.status == 404){
+                alert("no info sorry");
+                return null;
+            }
+            else if(response.status == 200){
+                const jasonData = await response.json();
+                // console.log("jasonData : ",jasonData);
+                // console.log("jasonData => meals", jasonData.meals);
+                return jasonData;
+            }
+        }
+      </script>
+</body>
+</html>

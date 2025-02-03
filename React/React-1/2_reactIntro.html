@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- react algorithm -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- reactDom algorithm -->
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+</head>
+<body>
+    <h1>react manipulation example</h1>
+     <div class="root"></div>
+
+     <script>
+        const root = document.querySelector(".root");
+
+        // React.createElement("tag_name", {props}, "content")
+        const reactHeadElement = React.createElement("h1", {style : {color : "red"}}, "hi from react");
+
+        ReactDOM.render(reactHeadElement, root);
+
+     </script>
+</body>
+</html>
