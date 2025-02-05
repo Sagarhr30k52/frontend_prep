@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Composition of function in js and map function</h1>
+
+    <script>
+        // function inner(){
+        //     console.log("i am the inner function");
+        // }
+        // function outer(insider){
+        //     console.log("i am outer function");
+        //     insider();
+        // }
+        // outer(inner);
+
+
+
+        /***********************************************/ 
+        // custom map function 
+        
+        // const arr = [1,3,4,5];
+        // function map(arr, cb){
+        //     let newarr = [];
+        //     for(let i = 0; i<arr.length; i++){
+        //         let sqvalue = cb(arr[i]);
+        //         newarr.push(sqvalue);
+        //     }
+        //     return newarr;
+        // }
+
+        // function squarer(a){
+        //     return a*a;
+        // }
+
+        // const sqarr = map(arr, squarer);
+        // console.log("````````````````````````````````");
+        // console.log(sqarr);
+
+        let arr = [1,2,3,4];
+
+        function cuber(elem){
+            return elem*elem*elem;
+        }
+        function squarer(elem){
+            return elem*elem;
+        }
+
+        const cubearr = arr.map(cuber);
+        console.log("cuber", cubearr);
+
+        console.log("````````````````````````````");
+
+        const squarearr = arr.map(squarer);
+        console.log("squarer", squarearr);
+
+    </script>
+</body>
+</html>

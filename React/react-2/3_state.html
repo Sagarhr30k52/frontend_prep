@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- react algorithm -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- reactDom algorithm -->
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- transpiler -> translator  -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        *{
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>use of State in react</h1>
+     <div class="root"></div>
+
+     <script type="text/babel">
+        const root = document.querySelector(".root");
+
+        // function returning html
+        
+        function Counter(){
+            const [value, setvalue] = React.useState(0);
+
+            const handelinc = () => {
+                if(value == 10){return}
+
+                setvalue(value+1);
+            }
+
+            const handeldec = () => {
+                if(value == 0){return}
+
+                setvalue(value-1);
+            }
+            
+            return <div>
+                {value}
+                <div>
+                    
+                    <button onClick = {handelinc}>+ plus</button>
+                    <button onClick = {handeldec}>- minus</button>
+                    </div>
+                </div>
+        }
+
+        ReactDOM.render(<Counter></Counter>, root);
+
+     </script>
+</body>
+</html>

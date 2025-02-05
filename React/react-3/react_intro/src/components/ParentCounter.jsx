@@ -1,0 +1,11 @@
+import Counter from "./Counters";
+
+function CounterParent(){
+    return <div>
+        <Counter initialValue={1}></Counter>
+        <Counter initialValue={2}></Counter>
+        <Counter initialValue={3}></Counter>
+    </div>
+}
+
+export default CounterParent;
