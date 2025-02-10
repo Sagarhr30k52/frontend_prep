@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+}
+.Green-Container{
+    background-color: #25D366;
+    height: 150px;
+}
+
+.White-Container{
+    background-color: white;
+    height: calc(100vh - 150px);
+}
+
+.Center-Container{
+    background-color: white;
+    height: 450px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.Logo{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.Whatsapp-Icon{
+    height: 33px;
+}
+.WHATSAPP{
+    color: white;
+    font-size: x-large;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 525;
+    position: relative;
+    top: -8px;
+}
+
+.Sign-in-button-box{
+    text-align: center;
+}
+
+.Finger-Tip-img{
+    height: 120px;
+    margin-bottom: 50px;
+}
+
+.Sign-In-button{
+    background-color: #25D366;
+    border: none;
+    height: 50px;
+    width: 130px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);;
+}
+
+.sign-in-text{
+    font-size: 2rem;
+    text-align: center;    
+}

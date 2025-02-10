@@ -1,0 +1,22 @@
+html{
+    font-family: sans-serif;    
+}
+header{
+    height: 100px;
+    background-color: slategrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    background-color: rgb(4, 3, 15);
+    color: rgb(242, 237, 245);
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weather-container{
+    display: flex;
+    gap: 3rem;
+}
